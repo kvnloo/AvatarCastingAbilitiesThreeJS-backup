@@ -9,6 +9,8 @@ The same gesture has a second meaning. Switch to **walk mode** and the drawn pat
 *ridden*: the avatar leaps onto the head of the stroke, folds into the meditation pose on a
 spinning ball of air and rides the path to its end, banking into every turn.
 
+**[Live demo →](https://achrefelouafi.github.io/AvatarCastingAbilitiesThreeJS/)**
+
 ---
 
 ## Quick start
@@ -30,6 +32,16 @@ npm run build
 ```bash
 npm run preview
 ```
+
+### Deploying
+
+`.github/workflows/deploy.yml` builds the site and publishes it to GitHub Pages on every push to
+`main`. Enable it once, under **Settings → Pages → Build and deployment → Source: GitHub Actions**;
+after that the workflow needs no secrets and no `gh-pages` branch.
+
+The bundle is location-independent — `vite.config.js` sets `base: './'` and every asset URL in the
+source is relative — so the same `dist/` works at a user page, a project page under `/<repo>/`, or
+any other static host.
 
 ### Assets
 
